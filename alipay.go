@@ -246,10 +246,6 @@ func (this *AliPay) NotifyRequestHandler(req *http.Request) (result *Notificatio
 		return nil, err
 	}
 
-	if this.client.NotifyVerify(noti.NotifyId) == false {
-		return nil, ErrUnknownNotification
-	}
-
 	result = &Notification{}
 	result.Channel = this.Identifier()
 	result.RawNotify = noti
