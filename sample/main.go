@@ -54,7 +54,7 @@ vTlWbWwZHVDP85dioLE9mfo5+Hh3SmHDi3TaVXjxeJsUgHkRgOX7
 )
 
 func main() {
-	var ap = pay4go.NewAliPay(appID, partnerID, aliPublicKey, privateKey, false)
+	var ap = pay4go.NewAliPay(appID, aliPublicKey, privateKey, false)
 	ap.ReturnURL = "http://tw.smartwalle.tk/pay/return"
 	ap.CancelURL = "http://tw.smartwalle.tk/pay/cancel"
 	ap.NotifyURL = "http://tw.smartwalle.tk/pay/notify"
