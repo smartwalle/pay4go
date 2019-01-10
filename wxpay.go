@@ -139,7 +139,7 @@ func (this *WXPay) getTrade(tradeNo, orderNo string) (result *Trade, err error) 
 	result.TradeStatus = rsp.TradeState
 	result.TotalAmount = fmt.Sprintf("%.2f", float64(rsp.TotalFee)/100.0)
 	result.PayerId = rsp.OpenId
-	if result.TradeStatus == wxpay.K_TRADE_STATUS_SUCCESS {
+	if result.TradeStatus == wxpay.K_TRADE_STATE_SUCCESS {
 		result.TradeSuccess = true
 	}
 	return result, nil
